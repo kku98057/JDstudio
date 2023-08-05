@@ -1,0 +1,66 @@
+body {
+  background-color: #000;
+}
+.container {
+  padding: 0 63px;
+  height: 100%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* hero */
+.hero {
+  height: 100vh;
+  width: 100%;
+}
+/* marquee */
+.marquee .container {
+  padding: 0;
+}
+.marquee_bar_wrap {
+  background-color: #3a3a3a;
+  overflow: hidden;
+}
+.marquee_bar {
+  display: flex;
+  align-items: center;
+  width: 300%;
+  animation: marquee 60s infinite linear;
+}
+.marquee_bar span {
+  white-space: nowrap;
+
+  color: #fff;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+/* banner */
+.banner {
+  width: 100%;
+  height: 500px;
+}
+.banner .container {
+  padding: 0;
+}
+.banne_bg {
+  width: 100%;
+
+  height: 100%;
+  background: url(/asset/imgs/banner.png) no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banne_bg h3 {
+  font-size: clamp(26px, 3vw, 60px);
+  font-style: normal;
+  font-weight: 700;
+  color: #fff;
+}
