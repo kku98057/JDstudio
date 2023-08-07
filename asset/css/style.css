@@ -1,3 +1,9 @@
+:root {
+  --font-bitter: "Bitter", serif;
+  --font-josefin: "Josefin Sans", sans-serif;
+  --font-crimson: "Crimson Text", serif;
+}
+
 body {
   background-color: #000;
 }
@@ -6,19 +12,57 @@ body {
   height: 100%;
   margin: 0 auto;
   width: 100%;
+  position: relative;
 }
-
+/* header */
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 40px 0;
+}
+header .container {
+  max-width: 100%;
+}
+.header_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  width: 263px;
+}
+.menu_btn {
+  width: 50px;
+  height: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu_bar {
+  width: 100%;
+  height: 8px;
+  border-radius: 50px;
+  background-color: #fff;
+}
 /* hero */
 .hero {
   height: 100vh;
   width: 100%;
+}
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 /* marquee */
 .marquee .container {
   padding: 0;
 }
 .marquee_bar_wrap {
-  background-color: #3a3a3a;
+  background-color: #00ff2b;
+  padding: 10px 0;
   overflow: hidden;
 }
 .marquee_bar {
@@ -29,8 +73,13 @@ body {
 }
 .marquee_bar span {
   white-space: nowrap;
-
-  color: #fff;
+  font-family: var(--font-crimson);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #000;
 }
 
 @keyframes marquee {
@@ -63,4 +112,289 @@ body {
   font-style: normal;
   font-weight: 700;
   color: #fff;
+}
+/* slogan */
+.slogan {
+  height: 100vh;
+  padding: 160px 0;
+}
+.slogan_wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.r_img {
+  position: absolute;
+  top: -50px;
+  width: 257px;
+  right: 60px;
+  animation: rotate 60s infinite linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.text-slot:nth-child(1) h3 {
+  text-align: left;
+}
+.text-slot:nth-child(2) h3 {
+  text-align: center;
+}
+.text-slot:nth-child(3) h3 {
+  text-align: right;
+}
+
+.text-slot h3 {
+  font-size: 160px;
+
+  font-style: normal;
+  font-weight: 400;
+  color: #00ff2a;
+}
+/* slogan_2 */
+.slogan_2 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.slogan_2 canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.slogan2_wrap {
+  position: relative;
+  z-index: 1;
+}
+.slogan2_wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+.slogan2_wrap h3 {
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+  font-size: 80px;
+  font-size: clamp(35px, 5vw, 80px);
+  color: #00ff2a;
+}
+.slogan2_wrap p {
+  font-size: clamp(20px, 4vw, 60px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #fff;
+  text-align: center;
+}
+/* portfolio */
+.portfolio {
+  padding: 80px 0;
+}
+.portfolio_wrap {
+  overflow: hidden;
+}
+.swiper-slide {
+  width: 660px !important;
+}
+
+/* slogan_3 */
+.slogan_3 {
+  padding: 225px 0;
+}
+.slogan_3_wrap {
+  display: flex;
+  align-items: center;
+  gap: 54px;
+}
+.slogan_3_wrap h3 {
+  font-family: var(--font-josefin);
+
+  font-size: 114px;
+
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+}
+.slogan_3_wrap .quote {
+  font-size: 114.338px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  font-family: var(--font-bitter);
+  color: #fff;
+}
+.rolling_text {
+  font-size: 114.338px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  font-family: var(--font-bitter);
+  color: #00ff2a;
+}
+
+/* portfolio2 */
+.portfolio2_wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* slogan_4 */
+.slogan_4 {
+  height: 100vh;
+  padding: 163px 0;
+}
+.slogan_4 .container {
+  max-width: calc(1432px + 126px);
+}
+.slogan_4_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 93px;
+  height: 100%;
+}
+.slogan_4_text h3 {
+  font-size: clamp(20px, 4vw, 60px);
+  font-style: normal;
+  font-weight: 400;
+
+  line-height: normal;
+  color: #fff;
+}
+.slogan_4_bar {
+  flex: 1;
+  width: 1px;
+  background-color: #4eb45f;
+}
+/* cs */
+.contactus {
+  padding: 80px 0;
+}
+.contactus .container {
+  max-width: calc(1432px + 126px);
+}
+.contactus_wrap {
+  display: flex;
+
+  align-items: center;
+  gap: 110px;
+}
+.contactus_form h3 {
+  font-size: clamp(20px, 4vw, 60px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #fff;
+}
+.contactus_form span {
+  font-size: clamp(20px, 4vw, 60px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #fff;
+}
+#contact-form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#contact-form input {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 20px;
+  color: #fff;
+}
+.contact_name,
+.contact_phone,
+.contact_etc {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.contact_name span,
+.contact_phone span,
+.contact_etc span {
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+textarea {
+  width: 100%;
+  height: 251px;
+  resize: none;
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 20px;
+  color: #fff;
+}
+.contact_btn {
+  width: 615px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 0;
+  background-color: #00ff2a;
+}
+.contact_btn span {
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #000;
+}
+.contactus_video {
+  flex: 1;
+  height: 821px;
+}
+.contactus_video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* footer */
+footer {
+  padding: 20px 0;
+  border-top: 1px solid #c9c9c938;
+}
+.footer_wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+.footer_wrap p {
+  font-size: 14px;
+  color: #757575;
+}
+
+@media all and (max-width: 1280px) {
+  .text-slot h3 {
+    font-size: 120px;
+  }
+  /* .slogan2_wrap h3 {
+    font-size: clamp(30px, 3vw, 60px);
+  } */
 }
